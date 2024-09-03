@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Tropical Mango Smoothie",
+    "description": "A refreshing blend of ripe mangoes, bananas, and a hint of coconut water. Perfect for a tropical getaway in a glass.",
+    "price": 80,
+    "rating": 4.7,
+    "image": "/images/berry.png",
+    "sizes": ["S", "M", "L"],
+    "category": "Smoothies"
+  },
+  {
+    "id": 2,
+    "name": "Berry Blast Smoothie",
+    "description": "An antioxidant-rich blend of strawberries, blueberries, and raspberries, mixed with almond milk for a creamy finish.",
+    "price": 90,
+    "rating": 4.5,
+    "image": "/images/berry.png",
+    "sizes": ["M", "L", "XL"],
+    "category": "Smoothies"
+  },
+  {
+    "id": 3,
+    "name": "Green Detox Smoothie",
+    "description": "A health-boosting blend of spinach, kale, green apples, and a touch of ginger. Perfect for a morning detox.",
+    "price": 85,
+    "rating": 4.8,
+    "image": "/images/berry.png",
+    "sizes": ["XS", "S", "M", "L"],
+    "category": "Smoothies"
+  }
+]
