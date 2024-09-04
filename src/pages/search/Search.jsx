@@ -1,36 +1,30 @@
 import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 import Products from '../../components/product/Products';
+import { useLoaderData } from 'react-router-dom';
+import Section from '../../components/layout/section/Section';
 
 const Search = () => {
-    const [query, setQuery] = useState("");
-    const [searchResults, setSearchResult] = useState([]);
-    const [error, setError] = useState(null);
+    const products = useLoaderData();
+    const [searchResults, setSearchResult] = useState(products);
 
     const onSearchHandler = async (e) => {
         let value = e.target.value;
-        setQuery(value);
 
-        if (value.trim === "") {
-            setSearchResult([]);
+        if (value.trim() === "") {
+            setSearchResult(products);
+            return;
         }
 
-        try {
-            const response = await fetch(`http://localhost:3000/api/search?query=${query}`);
-            const recourse = await response.json();
+        const filteredResults = products.filter(product =>
+            product.name.toLowerCase().includes(value.toLowerCase())
+        );
 
-            if (!response.ok) {
-                throw new Error(`Failed to fetch search results`);
-            }
-
-            setSearchResult(recourse);
-        } catch (error) {
-            setError(error);
-        }
+        setSearchResult(filteredResults);
     }
 
     return (
-        <div className='px-6'>
+        <Section>
             <div className='mt-2 relative'>
                 <div className="flex items-center justify-start">
                     <label htmlFor="search" className="pl-3">
@@ -46,13 +40,16 @@ const Search = () => {
                 </div>
             </div>
 
-            <div className='mt-8'>
-                <Products
-                    products={searchResults}
-                />
-            </div>
-
-        </div>
+            {
+                searchResults && (
+                    <div className='mt-8'>
+                        <Products
+                            products={searchResults}
+                        />
+                    </div>
+                )
+            }
+        </Section>
     );
 }
 

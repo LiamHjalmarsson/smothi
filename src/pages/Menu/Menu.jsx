@@ -2,6 +2,7 @@ import React from 'react';
 import Promotion from '../../components/promotion/Promotion';
 import Categories from '../../components/category/Categories';
 import Filter from '../../components/filter/Filter';
+import Section from '../../components/layout/section/Section';
 
 export const productsLoader = async () => {
     try {
@@ -20,7 +21,7 @@ export const productsLoader = async () => {
 
 const Menu = () => {
     return (
-        <section className='px-6'>
+        <Section>
             <Filter />
 
             <Promotion 
@@ -30,7 +31,7 @@ const Menu = () => {
             />
 
             <Categories />
-        </section>
+        </Section>
     );
 }
 

@@ -42,7 +42,7 @@ const Product = () => {
     };
 
     return (
-        <div className='top-0 left-0 absolute h-screen bg-primary_500 w-screen z-30 flex flex-col'>
+        <section className='top-0 left-0 absolute h-screen bg-primary_500 w-screen z-30 flex flex-col'>
 
             <ProductImage
                 image={product.image}
@@ -72,7 +72,7 @@ const Product = () => {
                     size={selectedSize}
                 />
             </div>
-        </div>
+        </section>
     );
 }
 

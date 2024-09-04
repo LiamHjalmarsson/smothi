@@ -17,7 +17,7 @@ const Product = ({ image, title, price, id, size }) => {
                         )
                     }
                 </div>
-                <Link to={`product/${title}`}>
+                <Link to={`/product/${title}`}>
                     <img src={`http://localhost:3000/${image}`} alt={title} className='w-28 h-28 mx-auto group-hover:scale-110 transition-transform duration-300 object-contain' />
                     <div className='my-1 w-full content'>
                         <h4 className='font-semibold text-sm text-center'>

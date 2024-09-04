@@ -8,6 +8,8 @@ import Cart from "../pages/Cart/Cart";
 import Profile from "../pages/Profile/Profile";
 import Product, { productLoader } from "../pages/Product/Product";
 import Search from "../pages/search/Search";
+import Checkout from "../pages/Cart/Checkout";
+import CartRoot from "../pages/Cart/CartRoot";
 
 export const router = createBrowserRouter([
     {
@@ -30,10 +32,21 @@ export const router = createBrowserRouter([
             {
                 path: "search",
                 element: <Search />,
+                loader: productsLoader,
             },
             {
                 path: "cart",
-                element: <Cart />
+                element: <CartRoot />,
+                children: [
+                    {
+                        index: true,
+                        element: <Cart />,
+                    },
+                    {
+                        path: "checkout",
+                        element: <Checkout />
+                    }
+                ]
             },
             {
                 path: "profile/:id",
@@ -50,5 +63,5 @@ export const router = createBrowserRouter([
         path: "signup",
         action: singUpAction,
         element: <SignUp />
-    },
+    }
 ]);
