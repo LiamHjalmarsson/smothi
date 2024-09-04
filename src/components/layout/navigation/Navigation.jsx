@@ -9,7 +9,7 @@ const Navigation = () => {
     let { isLoggedIn, user } = useSelector(state => state.auth);
 
     return (
-        <header className="p-6 text-black fixed w-full bg-white shadow-sm_middle z-20">
+        <header className="p-6 text-black fixed w-full bg-white shadow z-20">
             <nav className='flex justify-between items-center'>
                 <div>
                     <h3>

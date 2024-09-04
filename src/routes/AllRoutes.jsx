@@ -30,7 +30,6 @@ export const router = createBrowserRouter([
             {
                 path: "search",
                 element: <Search />,
-                loader: productsLoader,
             },
             {
                 path: "cart",

@@ -1,25 +1,22 @@
 import React from 'react';
-import { FaUserCircle, FaHeart } from 'react-icons/fa';
+import { useRouteLoaderData } from 'react-router-dom';
+import FilterItem from './FilterItem';
 
 const Filter = () => {
+    let categories = useRouteLoaderData("root");
+
     return (
-        <ul className='flex gap-3'>
-            <li className='text-center font-semibold tracking-wide'>
-                <div className='p-5 bg-primary_200 text-white rounded-lg'>
-                    <FaUserCircle size={24} />
-                </div>
-                <span>
-                    All
-                </span>
-            </li>
-            <li className='text-center tracking-wide'>
-                <div className='p-5 bg-silver rounded-lg'>
-                    <FaUserCircle size={24} />
-                </div>
-                <span>
-                    All
-                </span>
-            </li>
+        <ul className='flex gap-3 mb-6'>
+            <FilterItem
+                title="All"
+                isActive={true}
+            />
+            {categories.map(category => (
+                <FilterItem
+                    title={category.title}
+                    key={category.id}
+                />
+            ))}
         </ul>
     );
 }

@@ -6,7 +6,6 @@ import { uiActions } from '../../../store/ui-slice';
 
 const Footer = () => {
     const dispatch = useDispatch();
-
     const cartQuantity = useSelector(state => state.cart.totalQuantity);
 
     const toggleCartHandler = () => {
@@ -14,7 +13,7 @@ const Footer = () => {
     }
 
     return (
-        <footer className='fixed z-20 p-6 bottom-0 w-full text-black bg-white'>
+        <footer className='fixed z-20 p-6 bottom-0 w-full text-black bg-white shadow'>
             <ul className='flex justify-between items-center text-xl py-1 px-6'>
                 <li>
                     <NavLink to="/" className={({ isActive }) => isActive ? "text-primary_500 font-semibold" : "text-black"}>

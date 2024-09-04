@@ -51,20 +51,20 @@ const Product = () => {
             />
 
             <div className='flex-grow flex flex-col justify-between bg-white px-6 py-8 rounded-tl-3xl relative'>
-                <ProductDetail 
+                <ProductDetail
                     rating={product.rating}
                     name={product.name}
                     description={product.description}
                 />
 
-                <ProductSizes 
+                <ProductSizes
                     sizes={product.sizes}
                     price={selectedPrice}
                     onSelectSize={selectSizeHandler}
                     selectedSize={selectedSize}
                 />
-                
-                <AddToCart 
+
+                <AddToCart
                     id={product.id}
                     title={product.name}
                     price={selectedPrice}

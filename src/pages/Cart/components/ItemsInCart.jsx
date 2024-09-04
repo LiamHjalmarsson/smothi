@@ -1,5 +1,5 @@
 import React from 'react';
-import Item from '../../../components/cart/Item';
+import CartItem from './CartItem';
 
 const ItemsInCart = ({ items }) => {
     return (
@@ -10,7 +10,7 @@ const ItemsInCart = ({ items }) => {
 
             <ul className='flex flex-col gap-6'>
                 {items.map((item, index) => (
-                    <Item
+                    <CartItem
                         key={index}
                         id={item.id}
                         title={item.title}

@@ -1,9 +1,9 @@
 import React from 'react';
 import { FaMinus, FaPlus, FaTrash } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
-import { cartActions } from '../../store/cart-slice';
+import { cartActions } from '../../../store/cart-slice';
 
-const Item = ({ image, title, price, id, quantity, totalPrice, size }) => {
+const CartItem = ({ image, title, price, id, quantity, totalPrice, size }) => {
     let dispatch = useDispatch();
 
     let removeItemHandler = () => {
@@ -62,4 +62,4 @@ const Item = ({ image, title, price, id, quantity, totalPrice, size }) => {
     );
 }
 
-export default Item;
+export default CartItem;

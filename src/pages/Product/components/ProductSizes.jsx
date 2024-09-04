@@ -19,7 +19,7 @@ const ProductSizes = ({ sizes, price, onSelectSize, selectedSize }) => {
                 ))}
             </div>
 
-            <div className='text-center mt-4 text-red-500 font-semibold'>
+            <div className='text-center text-xl mt-4 text-red-500 font-bold'>
                 {price} kr
             </div>
         </div>
