@@ -4,7 +4,7 @@ import InputRow from "../../components/form/InputRow";
 import Header from './components/Header';
 import Form from './components/form';
 import Buttons from './components/Buttons';
-import { redirect, useActionData, useNavigate } from 'react-router-dom';
+import { useActionData, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { authActions } from '../../store/authSlice';
 
@@ -25,8 +25,6 @@ export let loginAction = async ({ request }) => {
             throw new Error(resource.message || 'Something went wrong');
         }
 
-        console.log(resource);
-        
         return resource;
     } catch (error) {
         return { error: error.message };

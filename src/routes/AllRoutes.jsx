@@ -7,6 +7,7 @@ import Menu, { productsLoader } from "../pages/Menu/Menu";
 import Cart from "../pages/Cart/Cart";
 import Profile from "../pages/Profile/Profile";
 import Product, { productLoader } from "../pages/Product/Product";
+import Search from "../pages/search/Search";
 
 export const router = createBrowserRouter([
     {
@@ -20,9 +21,13 @@ export const router = createBrowserRouter([
                 loader: productsLoader,
             },
             {
-                path: ":id",
+                path: "product/:id",
                 element: <Product />,
                 loader: productLoader,
+            },
+            {
+                path: "search",
+                element: <Search />
             },
             {
                 path: "cart",
@@ -31,11 +36,6 @@ export const router = createBrowserRouter([
             {
                 path: "profile/:id",
                 element: <Profile />,
-                // children:[
-                //     {
-
-                //     }
-                // ]
             }
         ]
     },

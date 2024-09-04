@@ -4,7 +4,7 @@ import { useLoaderData } from 'react-router-dom';
 
 const Products = ({ title }) => {
     const products = useLoaderData("root");
-    
+
     return (
         <div className='mt-6'>
             <h2 className='text-xl font-bold mb-4'>
@@ -20,6 +20,7 @@ const Products = ({ title }) => {
                         title={product.name}
                         price={product.price}
                         size={product.size}
+                        sd={product}
                     />
                 ))}
             </div>
