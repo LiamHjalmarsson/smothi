@@ -19,12 +19,18 @@ const Navigation = () => {
 
 
                 {isLoggedIn && (
-                    <Link to={`/profile/${user.id}`} className='flex items-center space-x-2 w-8 rounded-full'>
-                        <img src={`http://localhost:3000/${user.avatar}`} alt='' className=' rounded-full' />
+                    <Link to={`/profile/${user.id}`} className='flex items-center space-x-2 rounded-full'>
+                        <span className='text-sm'>
+                            {user.name}
+                        </span>
+                        <img src={`http://localhost:3000/${user.avatar}`} alt='' className=' rounded-full w-8' />
                     </Link>
                 ) || (
-                        <Link to={`/login`} className='flex items-center w-8 rounded-full justify-end'>
-                            <FaUserCircle />
+                        <Link to={`/login`} className='flex items-center gap-x-2 rounded-full justify-center py-1 px-4 bg-primary_400 text-white'>
+                            <span className='text-sm'>
+                                Login
+                            </span>
+                            <FaSignInAlt />
                         </Link>
                     )}
 

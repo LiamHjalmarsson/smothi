@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { redirect, useLoaderData } from 'react-router-dom';
 import ProductImage from './components/ProductImage';
 import AddToCart from './components/AddToCart';
 import ProductDetail from './components/ProductDetail';
@@ -34,7 +34,9 @@ const Product = () => {
     const selectSizeHandler = (size) => {
         setSelectedSize(size);
         const selected = product.sizes.find(s => s.size === size);
+
         if (selected) {
+            console.log(selected);
             setSelectedPrice(selected.price);
         }
     };
@@ -45,6 +47,7 @@ const Product = () => {
             <ProductImage
                 image={product.image}
                 name={product.name}
+                id={product.id}
             />
 
             <div className='flex-grow flex flex-col justify-between bg-white px-6 py-8 rounded-tl-3xl relative'>
@@ -64,9 +67,9 @@ const Product = () => {
                 <AddToCart 
                     id={product.id}
                     title={product.name}
-                    price={product.price}
+                    price={selectedPrice}
                     image={product.image}
-                    selectedSize={selectedSize}
+                    size={selectedSize}
                 />
             </div>
         </div>

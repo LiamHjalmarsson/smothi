@@ -16,9 +16,10 @@ const Products = ({ title }) => {
                     <Product
                         key={product.id}
                         id={product.id}
-                        img={product.image}
+                        image={product.image}
                         title={product.name}
                         price={product.price}
+                        size={product.size}
                     />
                 ))}
             </div>

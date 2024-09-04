@@ -7,11 +7,11 @@ import { useSelector } from 'react-redux';
 const Profile = () => {
     let { isLoggedIn, user } = useSelector(state => state.auth);
     let navigate = useNavigate();
-
-    if (!isLoggedIn) { 
-        navigate("/login");
-    }
     
+    if (!isLoggedIn) { 
+        return navigate("/login");
+    }
+
     return (
         <div className='px-6 py-8'>
             <div className='border border-red-400 rounded-full p-2 flex justify-center items-center mx-auto h-48 w-48'>

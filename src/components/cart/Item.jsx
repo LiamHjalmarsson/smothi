@@ -3,11 +3,11 @@ import { FaMinus, FaPlus, FaTrash } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../../store/cart-slice';
 
-const Item = ({ img, title, price, id, quantity, totalPrice }) => {
+const Item = ({ image, title, price, id, quantity, totalPrice, size }) => {
     let dispatch = useDispatch();
 
     let removeItemHandler = () => {
-        dispatch(cartActions.removeItemFromCart(id));
+        dispatch(cartActions.removeItemFromCart({ id, size }));
     }
 
     let addItemHandler = () => {
@@ -15,22 +15,23 @@ const Item = ({ img, title, price, id, quantity, totalPrice }) => {
             id,
             title,
             price,
-            img,
+            image,
+            size
         }));
     }
 
     let removeItems = () => {
-        dispatch(cartActions.removeItemsFromCart(id));
+        dispatch(cartActions.removeItemsFromCart({ id, size }));
     }
 
     return (
         <li className='flex gap-4'>
             <div className='p-4 w-28 bg-silver rounded-lg'>
-                <img src={`http://localhost:3000/${img}`} alt="" />
+                <img src={`http://localhost:3000/${image}`} alt="" />
             </div>
             <div className='py-2 flex flex-col justify-between'>
                 <p className='font-semibold'>
-                    {title}
+                    {title} {size}
                 </p>
                 <p>
                     {price} kr

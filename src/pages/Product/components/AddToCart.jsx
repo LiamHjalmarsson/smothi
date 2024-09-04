@@ -2,7 +2,7 @@ import React from 'react';
 import { cartActions } from '../../../store/cart-slice';
 import { useDispatch } from 'react-redux';
 
-const AddToCart = ({ id, title, price, image }) => {
+const AddToCart = ({ id, title, price, image, size }) => {
     const dispatch = useDispatch();
 
     const addToCartHandler = () => {
@@ -10,7 +10,8 @@ const AddToCart = ({ id, title, price, image }) => {
             id,
             title,
             price,
-            image
+            image,
+            size
         }));
     }
 

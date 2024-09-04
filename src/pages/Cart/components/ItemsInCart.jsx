@@ -14,10 +14,11 @@ const ItemsInCart = ({ items }) => {
                         key={index}
                         id={item.id}
                         title={item.title}
-                        img={item.img}
+                        image={item.image}
                         price={item.price}
                         quantity={item.quantity}
                         totalPrice={item.totalPrice}
+                        size={item.size}
                     />
                 ))}
             </ul>

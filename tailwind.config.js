@@ -31,7 +31,7 @@ export default {
         dark_gray: "#4D4D4D",
         gray: "#717171",
         light_gray: "#89939E",
-        gray_blue: "#ABBED1",
+        gray_blue: "#e3e9f0",
         silver: "#F5F7FA",
         // white: "#F1F1F1",
       },

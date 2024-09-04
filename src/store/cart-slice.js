@@ -11,11 +11,10 @@ export const cartSlice = createSlice(
         reducers: {
             addItemToCart(state, action) {
                 const newItem = action.payload;
-                const existingItem = state.items.find((item) => item.id === newItem.id);
+                const existingItem = state.items.find((item) => item.id === newItem.id && item.size === newItem.size);
 
                 state.totalQuantity++;
                 state.totalAmount += newItem.price;
-                state.changed = true;
 
                 if (!existingItem) {
                     state.items.push({
@@ -24,7 +23,8 @@ export const cartSlice = createSlice(
                         quantity: 1,
                         totalPrice: newItem.price,
                         title: newItem.title,
-                        img: newItem.img
+                        image: newItem.image,
+                        size: newItem.size,
                     });
                 } else {
                     existingItem.quantity++;
@@ -32,12 +32,11 @@ export const cartSlice = createSlice(
                 }
             },
             removeItemFromCart(state, action) {
-                const id = action.payload;
-                const existingItem = state.items.find((item) => item.id === id);
+                const { id, size } = action.payload;
+                const existingItem = state.items.find((item) => item.id === id && item.size === size);
 
                 state.totalQuantity--;
                 state.totalAmount -= existingItem.price;
-
                 if (existingItem.quantity === 1) {
                     state.items = state.items.filter((item) => item.id !== id);
                 } else {
@@ -46,13 +45,13 @@ export const cartSlice = createSlice(
                 }
             },
             removeItemsFromCart(state, action) {
-                const id = action.payload;
-                const existingItem = state.items.find((item) => item.id === id);
+                const { id, size } = action.payload;
+                const existingItem = state.items.find((item) => item.id === id && item.size === size);
 
                 if (existingItem) {
                     state.totalQuantity -= existingItem.quantity;
                     state.totalAmount -= existingItem.totalPrice;
-                    state.items = state.items.filter((item) => item.id !== id);
+                    state.items = state.items.filter((item) => item.id !== id || item.size !== size);
                 }
             },
             clearCart(state) {

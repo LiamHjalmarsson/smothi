@@ -9,6 +9,8 @@ import Button from '../../components/ui/Button';
 const Cart = () => {
     let cartItems = useSelector(state => state.cart.items);
 
+    console.log(cartItems);
+    
     return (
         <section className='flex flex-col px-6 flex-1'>
             <div className='flex-grow overflow-y-auto'>
