@@ -1,8 +1,8 @@
 import React from 'react';
 import Promotion from '../../components/promotion/Promotion';
-import Products from '../../components/product/Products';
+import Categories from '../../components/category/Categories';
 
-export let productsLoader = async () => {
+export const productsLoader = async () => {
     try {
         let response = await fetch(`http://localhost:3000/api/product`);
         let recourse = await response.json();
@@ -26,7 +26,7 @@ const Menu = () => {
                 discount="50% on fruit smoothie"
             />
 
-            <Products />
+            <Categories />
         </section>
     );
 }

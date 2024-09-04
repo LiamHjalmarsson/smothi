@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login, { loginAction } from "../pages/Auth/Login";
-import Root from "../pages/Root";
+import Root, { categoriesLoader } from "../pages/Root";
 import SignUp, { singUpAction } from "../pages/Auth/SignUp";
 import Error from "../pages/Error/Error";
 import Menu, { productsLoader } from "../pages/Menu/Menu";
@@ -13,7 +13,9 @@ export const router = createBrowserRouter([
     {
         path: "/",
         element: <Root />,
+        loader: categoriesLoader,
         errorElement: <Error />,
+        id: "root",
         children: [
             {
                 index: true,
@@ -27,7 +29,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: "search",
-                element: <Search />
+                element: <Search />,
+                loader: productsLoader,
             },
             {
                 path: "cart",

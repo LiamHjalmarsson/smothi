@@ -13,7 +13,7 @@
       { "size": "L", "price": 110 },
       { "size": "XL", "price": 120 }
     ],
-    "category": "Smoothies"
+    "categoryId": 3
   },
   {
     "id": 2,
@@ -29,7 +29,7 @@
       { "size": "L", "price": 110 },
       { "size": "XL", "price": 120 }
     ],
-    "category": "Smoothies"
+    "categoryId": 1
   },
   {
     "id": 3,
@@ -45,6 +45,6 @@
       { "size": "L", "price": 110 },
       { "size": "XL", "price": 120 }
     ],
-    "category": "cookies"
+    "categoryId": 2
   }
 ]
