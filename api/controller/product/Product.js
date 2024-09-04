@@ -17,7 +17,7 @@ export const getProduct = async (req, res) => {
     try {
         let products = await fs.readFile(productsFilePath);
         products = JSON.parse(products);
-        const product = products.find(product => product.id === parseInt(id, 10)); 
+        const product = products.find(product => product.name === id); 
 
         if (product) {
             res.status(200).json(product);

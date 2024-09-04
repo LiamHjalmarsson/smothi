@@ -5,8 +5,14 @@
     "description": "A refreshing blend of ripe mangoes, bananas, and a hint of coconut water. Perfect for a tropical getaway in a glass.",
     "price": 80,
     "rating": 4.7,
-    "image": "/images/berry.png",
-    "sizes": ["S", "M", "L"],
+    "image": "images/berry.png",
+    "sizes": [
+      { "size": "XS", "price": 80 },
+      { "size": "S", "price": 90 },
+      { "size": "M", "price": 100 },
+      { "size": "L", "price": 110 },
+      { "size": "XL", "price": 120 }
+    ],
     "category": "Smoothies"
   },
   {
@@ -15,8 +21,14 @@
     "description": "An antioxidant-rich blend of strawberries, blueberries, and raspberries, mixed with almond milk for a creamy finish.",
     "price": 90,
     "rating": 4.5,
-    "image": "/images/berry.png",
-    "sizes": ["M", "L", "XL"],
+    "image": "images/berry.png",
+    "sizes": [
+      { "size": "XS", "price": 80 },
+      { "size": "S", "price": 90 },
+      { "size": "M", "price": 100 },
+      { "size": "L", "price": 110 },
+      { "size": "XL", "price": 120 }
+    ],
     "category": "Smoothies"
   },
   {
@@ -25,8 +37,14 @@
     "description": "A health-boosting blend of spinach, kale, green apples, and a touch of ginger. Perfect for a morning detox.",
     "price": 85,
     "rating": 4.8,
-    "image": "/images/berry.png",
-    "sizes": ["XS", "S", "M", "L"],
+    "image": "images/berry.png",
+    "sizes": [
+      { "size": "XS", "price": 80 },
+      { "size": "S", "price": 90 },
+      { "size": "M", "price": 100 },
+      { "size": "L", "price": 110 },
+      { "size": "XL", "price": 120 }
+    ],
     "category": "Smoothies"
   }
 ]

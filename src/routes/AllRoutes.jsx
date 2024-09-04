@@ -3,10 +3,10 @@ import Login, { loginAction } from "../pages/Auth/Login";
 import Root from "../pages/Root";
 import SignUp, { singUpAction } from "../pages/Auth/SignUp";
 import Error from "../pages/Error/Error";
-import Menu from "../pages/Menu/Menu";
+import Menu, { productsLoader } from "../pages/Menu/Menu";
 import Cart from "../pages/Cart/Cart";
 import Profile from "../pages/Profile/Profile";
-import Product from "../pages/Product/Product";
+import Product, { productLoader } from "../pages/Product/Product";
 
 export const router = createBrowserRouter([
     {
@@ -17,10 +17,12 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <Menu />,
+                loader: productsLoader,
             },
             {
                 path: ":id",
                 element: <Product />,
+                loader: productLoader,
             },
             {
                 path: "cart",
