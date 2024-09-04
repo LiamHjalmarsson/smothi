@@ -2,10 +2,9 @@
   {
     "id": 1,
     "name": "Tropical Mango Smoothie",
-    "description": "A refreshing blend of ripe mangoes, bananas, and a hint of coconut water. Perfect for a tropical getaway in a glass.",
-    "price": 80,
+    "description": "A refreshing blend of ripe mangoes, bananas, and a hint of coconut water.",
     "rating": 4.7,
-    "image": "images/berry.png",
+    "image": "images/mango.png",
     "sizes": [
       { "size": "XS", "price": 80 },
       { "size": "S", "price": 90 },
@@ -13,15 +12,14 @@
       { "size": "L", "price": 110 },
       { "size": "XL", "price": 120 }
     ],
-    "categoryId": 3
+    "categoryId": 1
   },
   {
     "id": 2,
     "name": "Berry Blast Smoothie",
-    "description": "An antioxidant-rich blend of strawberries, blueberries, and raspberries, mixed with almond milk for a creamy finish.",
-    "price": 90,
+    "description": "An antioxidant-rich blend of strawberries, blueberries, and raspberries.",
     "rating": 4.5,
-    "image": "images/berry.png",
+    "image": "images/berrymix.png",
     "sizes": [
       { "size": "XS", "price": 80 },
       { "size": "S", "price": 90 },
@@ -34,16 +32,73 @@
   {
     "id": 3,
     "name": "Green Detox Smoothie",
-    "description": "A health-boosting blend of spinach, kale, green apples, and a touch of ginger. Perfect for a morning detox.",
-    "price": 85,
+    "description": "A health-boosting blend of spinach, kale, green apples, and a touch of ginger.",
     "rating": 4.8,
-    "image": "images/berry.png",
+    "image": "images/berrymix.png",
     "sizes": [
       { "size": "XS", "price": 80 },
       { "size": "S", "price": 90 },
       { "size": "M", "price": 100 },
       { "size": "L", "price": 110 },
       { "size": "XL", "price": 120 }
+    ],
+    "categoryId": 1
+  },
+  {
+    "id": 4,
+    "name": "Strawberry Banana Juice",
+    "description": "A classic blend of strawberries and bananas.",
+    "rating": 4.6,
+    "image": "images/juice.png",
+    "sizes": [
+      { "size": "XS", "price": 70 },
+      { "size": "S", "price": 80 },
+      { "size": "M", "price": 90 },
+      { "size": "L", "price": 100 },
+      { "size": "XL", "price": 110 }
+    ],
+    "categoryId": 2
+  },
+  {
+    "id": 5,
+    "name": "Orange Juice",
+    "description": "Freshly squeezed orange juice.",
+    "rating": 4.9,
+    "image": "images/orange.png",
+    "sizes": [
+      { "size": "XS", "price": 60 },
+      { "size": "S", "price": 70 },
+      { "size": "M", "price": 80 },
+      { "size": "L", "price": 90 },
+      { "size": "XL", "price": 100 }
+    ],
+    "categoryId": 2
+  },
+  {
+    "id": 6,
+    "name": "Melon Juice",
+    "description": "Freshly melon juice.",
+    "rating": 3.5,
+    "image": "images/melon.png",
+    "sizes": [
+      { "size": "S", "price": 70 },
+      { "size": "M", "price": 80 },
+      { "size": "L", "price": 90 },
+      { "size": "XL", "price": 100 }
+    ],
+    "categoryId": 2
+  },
+  {
+    "id": 7,
+    "name": "Grapefruit Juice",
+    "description": "Freshly melon juice.",
+    "rating": 3.5,
+    "image": "images/grapefruit.png",
+    "sizes": [
+      { "size": "S", "price": 70 },
+      { "size": "M", "price": 80 },
+      { "size": "L", "price": 90 },
+      { "size": "XL", "price": 100 }
     ],
     "categoryId": 2
   }

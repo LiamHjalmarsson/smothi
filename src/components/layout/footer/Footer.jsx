@@ -14,7 +14,7 @@ const Footer = () => {
     }
 
     return (
-        <footer className='fixed p-6 bottom-0 w-full text-black bg-white'>
+        <footer className='fixed z-20 p-6 bottom-0 w-full text-black bg-white'>
             <ul className='flex justify-between items-center text-xl py-1 px-6'>
                 <li>
                     <NavLink to="/" className={({ isActive }) => isActive ? "text-primary_500 font-semibold" : "text-black"}>

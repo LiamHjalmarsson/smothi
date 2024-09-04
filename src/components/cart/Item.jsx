@@ -26,16 +26,17 @@ const Item = ({ image, title, price, id, quantity, totalPrice, size }) => {
 
     return (
         <li className='flex gap-4'>
-            <div className='p-4 w-28 bg-silver rounded-lg'>
-                <img src={`http://localhost:3000/${image}`} alt="" />
+            <div className='p-4 bg-silver rounded-lg w-20'>
+                <img src={`http://localhost:3000/${image}`} alt="" className='object-contain' />
             </div>
+
             <div className='py-2 flex flex-col justify-between'>
-                <p className='font-semibold'>
-                    {title} {size}
+                <p className='text-sm'>
+                    {title} 
                 </p>
-                <p>
-                    {price} kr
-                </p>
+                <span className='text-xs mt-1'>
+                    {size}
+                </span>
                 <div className='flex gap-4 items-center'>
                     <span onClick={removeItemHandler}>
                         <FaMinus size={14} />
@@ -48,6 +49,7 @@ const Item = ({ image, title, price, id, quantity, totalPrice, size }) => {
                     </span>
                 </div>
             </div>
+
             <div className='py-2 flex-grow flex flex-col justify-between items-end'>
                 <span className='text-primary_600 py-2' onClick={removeItems}>
                     <FaTrash size={14} />
