@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
 import InputRow from "../../components/form/InputRow";
 import Header from './components/Header';
 import Form from './components/form';
 import Buttons from './components/Buttons';
-import { redirect, useActionData } from 'react-router-dom';
+import { redirect, useActionData, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { authActions } from '../../store/authSlice';
 
 export let loginAction = async ({ request }) => {
     let formData = await request.formData();
@@ -23,17 +25,26 @@ export let loginAction = async ({ request }) => {
             throw new Error(resource.message || 'Something went wrong');
         }
 
-        return redirect("/");
+        console.log(resource);
+        
+        return resource;
     } catch (error) {
         return { error: error.message };
     }
 }
 
 const Login = () => {
-    let data = useActionData();
+    const data = useActionData();
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
-    console.log(data);
-    
+    useEffect(() => {
+        if (data?.user) {
+            dispatch(authActions.register({ user: data.user}));
+            navigate("/");
+        }
+    }, [data]);
+
     return (
         <section className="flex flex-col justify-between items-center h-screen bg-custom-gradient shadow-2xl">
             <Header />

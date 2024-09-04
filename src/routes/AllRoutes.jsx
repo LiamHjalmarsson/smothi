@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
                 element: <Cart />
             },
             {
-                path: "profile",
+                path: "profile/:id",
                 element: <Profile />,
                 // children:[
                 //     {

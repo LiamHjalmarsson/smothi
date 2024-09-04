@@ -12,7 +12,7 @@ const ProductSizes = ({ sizes, price, onSelectSize, selectedSize }) => {
                     <button 
                         key={index} 
                         onClick={() => onSelectSize(size.size)}
-                        className={`p-3 border border-red-400 rounded-lg font-semibold flex-1 ${selectedSize === size.size ? 'bg-primary_500 text-white' : 'border-primary_400 text-primary_500'}`}
+                        className={`p-3 border border-red-400 rounded-lg font-semibold flex-1 duration-300 transition-colors ${selectedSize === size.size ? 'bg-primary_500 text-white hover:bg-primary_400' : 'border-primary_400 text-primary_500 hover:bg-silver'}`}
                     >
                         {size.size}
                     </button>

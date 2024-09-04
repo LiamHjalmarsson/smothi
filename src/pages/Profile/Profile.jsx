@@ -1,22 +1,30 @@
 import React from 'react';
-import logo from "/logo.png";
 import { FaPen } from "react-icons/fa";
 import { FaHeart } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Profile = () => {
+    let { isLoggedIn, user } = useSelector(state => state.auth);
+    let navigate = useNavigate();
+
+    if (!isLoggedIn) { 
+        navigate("/login");
+    }
+    
     return (
         <div className='px-6 py-8'>
-            <div className='border border-red-400 rounded-full p-2 flex justify-center items-center w-fit mx-auto'>
+            <div className='border border-red-400 rounded-full p-2 flex justify-center items-center mx-auto h-48 w-48'>
                 <div className='border border-red-400 rounded-full p-2 relative'>
-                    <img src={logo} alt="" className='object-cover p-4 w-32 h-32' />
-                    <div className='absolute bottom-0 right-2 text-white bg-primary_400 p-2 rounded-full'>
+                    <img src={`http://localhost:3000/${user.avatar}`} alt="" className='object-cover rounded-full' />
+                    <div className='absolute bottom-2 right-2 text-white bg-primary_400 p-2 rounded-full'>
                         <FaPen size={16} />
                     </div>
                 </div>
             </div>
 
             <h2 className='text-center font-semibold text-3xl mt-4'>
-                John Doe
+                {user.name}
             </h2>
 
 

@@ -25,8 +25,8 @@ const Item = ({ img, title, price, id, quantity, totalPrice }) => {
 
     return (
         <li className='flex gap-4'>
-            <div className='p-4 w-24 bg-silver rounded-lg'>
-                <img src={img} alt="" />
+            <div className='p-4 w-28 bg-silver rounded-lg'>
+                <img src={`http://localhost:3000/${img}`} alt="" />
             </div>
             <div className='py-2 flex flex-col justify-between'>
                 <p className='font-semibold'>
