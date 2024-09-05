@@ -5,6 +5,8 @@ import { FaCreditCard } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
 import { BsCalendar2DateFill } from "react-icons/bs";
 import Button from '../../components/ui/Button';
+import chip from "../../assets/credit.png";
+import visa from "../../assets/visa.png";
 
 const Checkout = () => {
     return (
@@ -14,11 +16,35 @@ const Checkout = () => {
             </h2>
 
             <div className='mt-6 flex flex-col'>
-                <div className='mb-6 p-4 bg-blue-500'>
-                    Card
+                <div className='mb-6 p-6 bg-blue-300 rounded-lg shadow-md'>
+                    <div className='flex justify-between items-center'>
+                        <img src={chip} className='w-7 rounded-md' />
+                        <img src={visa} className='w-24' />
+                    </div>
+                    <p className='mt-4 tracking-wider'>
+                        1111-1111-1111-1111
+                    </p>
+                    <div className='mt-4'>
+                        <div className='flex justify-between items-center mb-1'>
+                            <span className='text-xs font-light'>
+                                Card Holder
+                            </span>
+                            <span className='text-xs font-light'>
+                                Expires
+                            </span>
+                        </div>
+                        <div className='flex justify-between items-center'>
+                            <span className='text-sm'>
+                                Edin Eriksson
+                            </span>
+                            <span className='text-sm'>
+                                09/24
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
+
             <div className='flex flex-col gap-6 px-4 py-8 shadow mb-6'>
                 <InputRow
                     id="name"
