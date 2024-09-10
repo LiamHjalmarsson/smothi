@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Promotion from '../../components/promotion/Promotion';
 import Categories from '../../components/category/Categories';
 import Filter from '../../components/filter/Filter';
 import Section from '../../components/layout/section/Section';
+import { useLoaderData } from 'react-router-dom';
 
 export const productsLoader = async () => {
     try {
@@ -20,17 +21,33 @@ export const productsLoader = async () => {
 }
 
 const Menu = () => {
+    const products = useLoaderData();
+    const [filteredProducts, setFilteredProducts] = useState(products);
+
+    const filterHandler = (id) => {
+        if (id === 0) {
+            setFilteredProducts(products);
+        } else {
+            const filtered = products.filter(product => product.categoryId === id);
+            setFilteredProducts(filtered);
+        }
+    }
+
     return (
         <Section>
-            <Filter />
+            <Filter
+                categoryHandler={filterHandler}
+            />
 
-            <Promotion 
+            <Promotion
                 title="Todays offer"
                 text="Todays offer"
                 discount="50% on fruit smoothie"
             />
 
-            <Categories />
+            <Categories
+                products={filteredProducts}
+            />
         </Section>
     );
 }

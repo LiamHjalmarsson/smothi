@@ -1,19 +1,24 @@
 import React from 'react';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const Product = ({ image, title, price, id, size }) => {
     let { isLoggedIn, user } = useSelector(state => state.auth);
+    let dispatch = useDispatch();
+
+    const likeHandler = () => {
+        
+    }
 
     return (
         <div>
             <div className='group bg-silver hover:bg-gray_blue duration-300 transition-colors relative p-3 flex flex-col justify-center items-center rounded-lg overflow-hidden h-full'>
                 <div className='absolute z-10 p-3 top-0 right-0 bg-red-500 text-white rounded-tr-lg rounded-bl-lg hover:bg-red-400 transition-colors duration-300'>
-                    {isLoggedIn && (
-                            <FaHeart />
-                        ) || (
-                            <FaRegHeart />
+                    {isLoggedIn && user?.likes?.id === id && (
+                        <FaHeart />
+                    ) || (
+                            <FaRegHeart onClick={isLoggedIn ? likeHandler : () => { }} />
                         )
                     }
                 </div>

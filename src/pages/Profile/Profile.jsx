@@ -28,7 +28,7 @@ const Profile = () => {
             </h2>
 
 
-            <div className='mx-auto mt-8 py-4 px-6 bg-primary_500 text-white rounded-xl flex justify-between items-center shadow-sm_middle shadow-gray'>
+            <div className='mx-auto mt-8 py-4 px-6 w-full bg-primary_500 text-white rounded-xl flex justify-between items-center shadow-sm_middle shadow-gray'>
                 <div className='text-center flex-1'>
                     <p className='font-bold'>
                         Orders

@@ -4,6 +4,14 @@
     "email": "admin@admin.se",
     "id": "9BB_pPMqQehhISMZuitiv",
     "password": "$2b$10$V0blMX0vlgm0WXWk9J16Uunj2fgPc1wPH4dPxzYjMzfaUNQrRpbra",
-    "avatar": "avatar/avatar.jpg"
+    "avatar": "avatar/avatar.jpg",
+    "likes": []
+  },
+  {
+    "name": "liam",
+    "email": "liam@liam.com",
+    "id": "gT3KP5_rqd8BK1uMJdmde",
+    "password": "$2b$10$blAHQfDJtrzlgCGEaJEqo.Y/VF5ZPDZ03k.Rakk6Gm4vdLKiK/h1a",
+    "likes": []
   }
 ]

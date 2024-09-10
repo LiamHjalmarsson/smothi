@@ -45,7 +45,7 @@ const Checkout = () => {
                 </div>
             </div>
 
-            <div className='flex flex-col gap-6 px-4 py-8 shadow mb-6'>
+            <div className='flex flex-col gap-6 px-4 py-8 shadow mb-6 rounded-md'>
                 <InputRow
                     id="name"
                     name="name"
