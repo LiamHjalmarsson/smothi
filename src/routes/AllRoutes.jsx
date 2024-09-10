@@ -1,15 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
-import Login, { loginAction } from "../pages/auth/Login";
+import Login, { loginAction } from "../pages/Auth/Login";
 import Root, { categoriesLoader } from "../pages/Root";
-import SignUp, { singUpAction } from "../pages/auth/SignUp";
-import Error from "../pages/error/Error";
-import Menu, { productsLoader } from "../pages/menu/Menu";
-import Cart from "../pages/cart/Cart";
-import Profile from "../pages/profile/Profile";
-import Product, { productLoader } from "../pages/product/Product";
-import Search from "../pages/search/Search";
-import Checkout from "../pages/cart/Checkout";
-import CartRoot from "../pages/cart/CartRoot";
+import SignUp, { singUpAction } from "../pages/Auth/SignUp";
+import Error from "../pages/Error/Error";
+import Menu, { productsLoader } from "../pages/Menu/Menu";
+import Cart from "../pages/Cart/Cart";
+import Profile from "../pages/Profile/Profile";
+import Product, { productLoader } from "../pages/Product/Product";
+// import Search from "../pages/Search/Search";
+import Checkout from "../pages/Cart/Checkout";
+import CartRoot from "../pages/Cart/CartRoot";
 
 export const router = createBrowserRouter([
     {
@@ -29,11 +29,11 @@ export const router = createBrowserRouter([
                 element: <Product />,
                 loader: productLoader,
             },
-            {
-                path: "search",
-                element: <Search />,
-                loader: productsLoader,
-            },
+            // {
+            //     path: "search",
+            //     element: <Search />,
+            //     loader: productsLoader,
+            // },
             {
                 path: "cart",
                 element: <CartRoot />,
