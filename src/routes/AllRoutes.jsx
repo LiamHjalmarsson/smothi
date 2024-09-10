@@ -1,15 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
-import Login, { loginAction } from "../pages/Auth/Login";
+import Login, { loginAction } from "../pages/auth/Login";
 import Root, { categoriesLoader } from "../pages/Root";
-import SignUp, { singUpAction } from "../pages/Auth/SignUp";
-import Error from "../pages/Error/Error";
-import Menu, { productsLoader } from "../pages/Menu/Menu";
-import Cart from "../pages/Cart/Cart";
-import Profile from "../pages/Profile/Profile";
-import Product, { productLoader } from "../pages/Product/Product";
+import SignUp, { singUpAction } from "../pages/auth/SignUp";
+import Error from "../pages/error/Error";
+import Menu, { productsLoader } from "../pages/menu/Menu";
+import Cart from "../pages/cart/Cart";
+import Profile from "../pages/profile/Profile";
+import Product, { productLoader } from "../pages/product/Product";
 import Search from "../pages/search/Search";
-import Checkout from "../pages/Cart/Checkout";
-import CartRoot from "../pages/Cart/CartRoot";
+import Checkout from "../pages/cart/Checkout";
+import CartRoot from "../pages/cart/CartRoot";
 
 export const router = createBrowserRouter([
     {
